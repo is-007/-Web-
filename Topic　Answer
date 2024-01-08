@@ -1,0 +1,17 @@
+class Tweet:
+    def __init__(self, author, content):
+        self.author = author
+        self.content = content
+        self.likes = 0
+
+    def like(self):
+        self.likes += 1
+
+tweet1 = Tweet("User1", "これは最初のツイートです！")
+tweet2 = Tweet("User2", "Pythonを使ってTwitterのようなコードを書いています。")
+
+tweet1.like()
+tweet1.like()
+
+print(f"{tweet1.author}が「{tweet1.content}」を{tweet1.likes}人がいいねしました。")
+print(f"{tweet2.author}が「{tweet2.content}」を{tweet2.likes}人がいいねしました。")
